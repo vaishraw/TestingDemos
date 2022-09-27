@@ -15,7 +15,11 @@ public class TestAngApp {
 		
 //		addProductToShoppingCart(webdriver,"ecomm","Headphones","2");
 		
-		validation(webdriver,"tforms","1234");
+//		addProductToShoppingCart(webdriver,"ecomm","Xpath","10");
+		
+		addPost(webdriver,"tforms","x@y.com"," ");
+		
+//		validation(webdriver,"tforms","1234");
 		
 
 	}
@@ -23,7 +27,7 @@ public class TestAngApp {
 		webdriver.get(url+"/"+route);
 		webdriver.findElement(By.name("email")).sendKeys(email);
 		webdriver.findElement(By.id("tforms")).click();
-		System.out.println(webdriver.findElement(By.name("error")).getText());
+//		System.out.println(webdriver.findElement(By.class("emailerror")).getText());
 		
 		
 	}
@@ -32,6 +36,18 @@ public class TestAngApp {
 		webdriver.findElement(By.name("productName")).sendKeys(productname);
 		webdriver.findElement(By.name("quantity")).sendKeys(quantity);
 		webdriver.findElement(By.name("addProduct")).click();
+	}
+	private static void addProductToShoppingCartXpath(WebDriver webdriver, String route, String productname, String quantity) {
+		webdriver.get(url+"/"+route);
+		webdriver.findElement(By.xpath("//input[@placeholder='Product Name']")).sendKeys(productname);
+		webdriver.findElement(By.cssSelector("input[placeholder='Quantity']")).sendKeys(quantity);
+		webdriver.findElement(By.name("addProduct")).click();
+	}
+	private static void addPost(WebDriver webdriver, String route, String email, String quantity) {
+		webdriver.get(url+"/"+route);
+		webdriver.findElement(By.xpath("//form/div[2]/div/input")).sendKeys(email);
+//		webdriver.findElement(By.cssSelector("input[placeholder='Quantity']")).sendKeys(quantity);
+//		webdriver.findElement(By.name("addProduct")).click();
 	}
 	
 

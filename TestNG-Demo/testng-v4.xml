@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="HomeLoanTest">
+		<classes>
+			<class name="LoanApplications.HomeLoanApplicationTests">
+			<methods>
+			<exclude name="homeloanLoginWeb" />
+			<exclude name="homeloanLoginMobile" />
+			</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="CarLoanTest">
+		<classes>
+			<class name="LoanApplications.CarLoanApplicationTests">
+			<methods>
+			<exclude name="carloanLoginWeb" />
+			<exclude name="carloanLoginMobile" />
+			</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="PersonalLoanTest">
+		<classes>
+			<class name="LoanApplications.PersonalLoanApplicationTests">
+			<methods>
+			<exclude name="personalloanLoginWeb" />
+			<exclude name="personalloanLoginMobile" />
+			</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
