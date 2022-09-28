@@ -17,9 +17,9 @@ public class TestAngApp {
 		
 //		addProductToShoppingCart(webdriver,"ecomm","Xpath","10");
 		
-		addPost(webdriver,"tforms","x@y.com"," ");
+//		addPost(webdriver,"tforms","x@y.com"," ");
 		
-//		validation(webdriver,"tforms","1234");
+		validation(webdriver,"tforms","1234");
 		
 
 	}
@@ -27,7 +27,7 @@ public class TestAngApp {
 		webdriver.get(url+"/"+route);
 		webdriver.findElement(By.name("email")).sendKeys(email);
 		webdriver.findElement(By.id("tforms")).click();
-//		System.out.println(webdriver.findElement(By.class("emailerror")).getText());
+        System.out.println(webdriver.findElement(By.className("small")).getText());
 		
 		
 	}
